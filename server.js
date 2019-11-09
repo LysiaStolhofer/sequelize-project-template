@@ -4,6 +4,7 @@
 // ***********************************************************
 // *** Dependencies
 // =============================================================
+
 require('dotenv').config();
 const express = require('express');
 const db = require('./models');
@@ -27,8 +28,10 @@ require('./routes/api-routes.js')(app);
 
 // Starting our Express app
 // =============================================================
-app.listen(PORT, function() {
-  console.log(`SERVER LISTENING ON: http://localhost:${PORT}`);
-  console.log('----------------------------');
-
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log(`SERVER LISTENING ON: http://localhost:${PORT}`);
+    console.log('----------------------------');
+    // db.sequelize.sync();
+  });
 });
