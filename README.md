@@ -1,6 +1,6 @@
 # Sequelize-project-template
 
-_Create your own Sequelize-Template_
+_Create your own Sequelize-Template._
 
 --------------------------------------------------------------------------------------------------------------------------------------
 ## Instructions
